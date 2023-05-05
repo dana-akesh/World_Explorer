@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="linearLayout_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/ic_capture</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="tv_title_style">
+        <item name="fontFamily">@font/whaleitried</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/orange</item>
+    </style>
+
+    <style name="tv_answer_style">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:width">150dp</item>
+        <item name="android:height">70dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="fontFamily">@font/whaleitried</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/default_option_border</item>
+    </style>
+
+    <style name="btn_submit_style">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:width">150dp</item>
+        <item name="android:height">70dp</item>
+        <item name="fontFamily">@font/whaleitried</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/yellow</item>
+    </style>
+</resources>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">World Explorer</string>
+    <string name="what_is_this_country">Guess what country is this?</string>
+    <string name="quiz_icon">quiz icon</string>
+    <string name="progressbar_numbers">0/10</string>
+</resources>

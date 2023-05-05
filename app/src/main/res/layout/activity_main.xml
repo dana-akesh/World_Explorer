@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/linearLayout_style"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="96dp"
+        android:contentDescription="@string/quiz_icon"
+        app:srcCompat="@drawable/ic_quiz" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/tv_title_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/what_is_this_country" />
+
+    <ImageView
+        android:id="@+id/iv_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:contentDescription="flag picture"
+        android:src="@drawable/ic_flag_ps"></ImageView>
+
+    <LinearLayout
+        android:id="@+id/ly_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:indeterminate="false"
+            android:max="10"
+            android:minHeight="50dp"
+            android:progress="0"></ProgressBar>
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/whaleitried"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/progressbar_numbers"
+            android:textColorHint="@color/green"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="346dp"
+        android:layout_height="183dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <TextView
+            android:id="@+id/tv_option_one"
+            style="@style/tv_answer_style"
+            tools:text="Palestine"></TextView>
+
+        <TextView
+            android:id="@+id/tv_option_two"
+            style="@style/tv_answer_style"
+            tools:text="Saudi Arabia"></TextView>
+
+        <TextView
+            android:id="@+id/tv_option_three"
+            style="@style/tv_answer_style"
+            tools:text="Palestine"></TextView>
+
+        <TextView
+            android:id="@+id/tv_option_four"
+            style="@style/tv_answer_style"
+            tools:text="Palestine"></TextView>
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/btn_submit_style"
+        android:layout_width="185dp"
+        android:layout_height="79dp"
+        android:text="Submit"></Button>
+</LinearLayout>
