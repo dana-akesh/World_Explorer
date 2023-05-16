@@ -1,5 +1,7 @@
 package com.example.worldexplorer;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -105,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         options.add(3, tv_option_four);
 
         for (TextView op : options) {
-            op.setTextColor(Color.parseColor("#ffffff"));
+            op.setTextColor(Color.parseColor("#000000"));
             op.setBackground(ContextCompat.getDrawable(this, R.drawable.default_option_border));
         }
     }
@@ -115,7 +118,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         defaultOptionView();
 
         selectedOption = selected;
-        tv.setTextColor(Color.parseColor("#A3415C"));
+        //tv.setTextColor(Color.parseColor("#A3415C"));
+        tv.setTextColor(Color.parseColor("#000000"));
         tv.setBackground(ContextCompat.getDrawable(this, R.drawable.selected_option_border));
 
     }
@@ -149,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if (current_question.getCorrectAnswer() != selectedOption) {
                     answerView(selectedOption, R.drawable.wrong_option_border);
-                }else {
+                } else {
                     correctAnswers++;
                 }
                 // show the correct answer
@@ -158,7 +162,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // if the user has reached the last question then change the text of the button to show the result
                 if (currentPosition == questionArrayList.size()) {
                     btn_submit.setText("Show Result ☺");
-                    Toast.makeText(this, correctAnswers + "/"+ questionArrayList.size(), Toast.LENGTH_LONG).show();
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setTitle("Result");
+                    builder.setMessage("Your Score is " + correctAnswers + "/" + questionArrayList.size());
+                    builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    });
+                    builder.show();
+
                 } else {
                     btn_submit.setText("Go to Next Question ");
                 }

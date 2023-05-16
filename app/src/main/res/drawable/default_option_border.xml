@@ -12,5 +12,9 @@
         android:bottom="1dp"
         android:top="1dp" />
 
+    <text
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
     <corners android:radius="10dp" />
 </shape>
