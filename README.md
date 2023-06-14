@@ -12,6 +12,7 @@ feel free to check it out!
 
 
 <p float="center">
+  <img src="https://github.com/dana-akesh/World_Explorer/assets/86303193/67eb695b-dfd7-4bb0-8acb-32abcc15a2e1"  width="196.375" height="416.5">
   <img src="https://github.com/dana-akesh/World_Explorer/assets/86303193/ac1e7f51-3fab-4ae9-a476-ecdd423602b9"  width="196.375" height="416.5">
   <img src="https://github.com/dana-akesh/World_Explorer/assets/86303193/08f51395-ac43-49fa-a2df-0c65c49136d0"  width="196.375" height="416.5">
   <img src="https://github.com/dana-akesh/World_Explorer/assets/86303193/e9e78f47-1a1f-41ec-b6d9-6190dea47a60"  width="196.375" height="416.5">
