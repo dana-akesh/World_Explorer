@@ -1,5 +1,12 @@
 package com.example.worldexplorer;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class Constants {
@@ -118,4 +125,25 @@ public class Constants {
 
         return questionArrayList;
     }
+    public static void saveToSharedPreferences(Context context, ArrayList<Question> questionArrayList){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(questionArrayList);
+        editor.putString("questionArrayList", json);
+        editor.apply();
+    }
+
+    public static ArrayList<Question> readFromSharedPreferences(Context context){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = sharedPreferences.getString("questionArrayList", null);
+        Type type = new TypeToken<ArrayList<Question>>() {}.getType();
+        ArrayList<Question> questionArrayList = gson.fromJson(json, type);
+        if(questionArrayList == null){
+            questionArrayList = getQuestion();
+        }
+        return questionArrayList;
+    }
+
 }

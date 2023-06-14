@@ -1,9 +1,14 @@
 package com.example.worldexplorer;
 
+import static com.example.worldexplorer.Constants.saveToSharedPreferences;
+
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -15,6 +20,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -51,9 +58,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @Override
+    protected void onStop() {
+        saveToSharedPreferences(getApplicationContext(), questionArrayList);
+        super.onStop();
+    }
+
     private void initializeUiComponents() {
         try {
-            questionArrayList = Constants.getQuestion();
+            // to initialize all the ui components
+            questionArrayList = Constants.readFromSharedPreferences(getApplicationContext());
             tv_question = findViewById(R.id.tv_title);
             iv_flag = findViewById(R.id.iv_flag);
             LinearLayout ly_progressbar = findViewById(R.id.ly_progressbar);
@@ -118,7 +132,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         defaultOptionView();
 
         selectedOption = selected;
-        //tv.setTextColor(Color.parseColor("#A3415C"));
         tv.setTextColor(Color.parseColor("#000000"));
         tv.setBackground(ContextCompat.getDrawable(this, R.drawable.selected_option_border));
 
@@ -196,4 +209,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
     }
+
 }
