@@ -137,10 +137,10 @@ public class Constants {
     public static ArrayList<Question> readFromSharedPreferences(Context context){
         SharedPreferences sharedPreferences = context.getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE);
         Gson gson = new Gson();
-        String json = sharedPreferences.getString("questionArrayList", null);
+        String json = sharedPreferences.getString("questionArrayList","");
         Type type = new TypeToken<ArrayList<Question>>() {}.getType();
         ArrayList<Question> questionArrayList = gson.fromJson(json, type);
-        if(questionArrayList == null){
+        if(questionArrayList == null  || questionArrayList.size() == 0){
             questionArrayList = getQuestion();
         }
         return questionArrayList;
