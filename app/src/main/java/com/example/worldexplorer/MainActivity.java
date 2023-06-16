@@ -1,7 +1,5 @@
 package com.example.worldexplorer;
 
-import static com.example.worldexplorer.Constants.saveToSharedPreferences;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;

@@ -19,12 +19,14 @@
         app:lottie_speed="1" />
 
     <TextView
+        android:id="@+id/welcomeToLabel"
         style="@style/splashStyleLabel1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Welcome to " />
 
     <TextView
+        android:id="@+id/worldExplorerLabel"
         style="@style/splashStyleLabel2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
