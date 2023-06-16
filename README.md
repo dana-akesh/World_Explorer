@@ -8,6 +8,7 @@ feel free to check it out!
 #### 1) UX/UI that is suitable for kids. 
 #### 2) Spalsh screen animation upon starting the application. v1.2
 #### 3) Storing in Shared prefrances. v1.2
+#### 3) Simple Animation in the Splash Screen. v1.3
 #### 4) Recycler View (Coming soon!). 
 
 
