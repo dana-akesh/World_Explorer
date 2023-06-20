@@ -10,7 +10,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class Constants {
-    public static ArrayList<Question> getQuestion(){
+    public static ArrayList<Question> getQuestion() {
         ArrayList<Question> questionArrayList = new ArrayList<>();
 
         // question 1
@@ -125,7 +125,8 @@ public class Constants {
 
         return questionArrayList;
     }
-    public static void saveToSharedPreferences(Context context, ArrayList<Question> questionArrayList){
+
+    public static void saveToSharedPreferences(Context context, ArrayList<Question> questionArrayList) {
         SharedPreferences sharedPreferences = context.getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
@@ -134,16 +135,33 @@ public class Constants {
         editor.apply();
     }
 
-    public static ArrayList<Question> readFromSharedPreferences(Context context){
+    public static ArrayList<Question> readFromSharedPreferences(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE);
         Gson gson = new Gson();
-        String json = sharedPreferences.getString("questionArrayList","");
-        Type type = new TypeToken<ArrayList<Question>>() {}.getType();
+        String json = sharedPreferences.getString("questionArrayList", "");
+        Type type = new TypeToken<ArrayList<Question>>() {
+        }.getType();
         ArrayList<Question> questionArrayList = gson.fromJson(json, type);
-        if(questionArrayList == null  || questionArrayList.size() == 0){
+        if (questionArrayList == null || questionArrayList.size() == 0) {
             questionArrayList = getQuestion();
         }
         return questionArrayList;
     }
+
+    // This is the array of questions that will be used in the study activity
+    public static final Question[] questions = {
+            new Question(R.drawable.ic_flag_eg, "Egypt"),
+            new Question(R.drawable.ic_flag_bh, "Bahrain"),
+            new Question(R.drawable.ic_flag_iq, "Iraq"),
+            new Question(R.drawable.ic_flag_jo, "Jordan"),
+            new Question(R.drawable.ic_flag_lb, "Lebanon"),
+            new Question(R.drawable.ic_flag_ma, "Morocco"),
+            new Question(R.drawable.ic_flag_om, "Oman"),
+            new Question(R.drawable.ic_flag_ps, "Palestine"),
+            new Question(R.drawable.ic_flag_qa, "Qatar"),
+            new Question(R.drawable.ic_flag_sa, "Saudi Arabia"),
+            new Question(R.drawable.ic_flag_sy, "Syria"),
+            new Question(R.drawable.ic_flag_tn, "Tunisia"),
+    };
 
 }

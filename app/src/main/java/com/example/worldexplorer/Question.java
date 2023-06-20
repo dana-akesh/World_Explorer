@@ -11,6 +11,7 @@ public class Question {
     private String optionThree;
     private String optionFour;
     private int correctAnswer;
+    private String correctAnswerString;
 
     public Question(int id, String question, int image, String optionOne, String optionTwo, String optionThree, String optionFour, int correctAnswer) {
         this.id = id;
@@ -21,6 +22,11 @@ public class Question {
         this.optionThree = optionThree;
         this.optionFour = optionFour;
         this.correctAnswer = correctAnswer;
+    }
+
+    public Question(int imageID, String correctAnswerString) {
+        this.image = imageID;
+        this.correctAnswerString = correctAnswerString;
     }
 
     public int getId() {
@@ -53,5 +59,9 @@ public class Question {
 
     public int getCorrectAnswer() {
         return correctAnswer;
+    }
+
+    public String getCorrectAnswerString() {
+        return correctAnswerString;
     }
 }

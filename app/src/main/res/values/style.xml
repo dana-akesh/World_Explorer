@@ -19,6 +19,16 @@
         <item name="android:textColor">@color/orange</item>
     </style>
 
+    <style name="tv_title_style_letsExplore">
+        <item name="fontFamily">@font/whaleitried</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">44sp</item>
+        <item name="android:textColor">@color/orange</item>
+    </style>
+
     <style name="tv_answer_style">
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
@@ -65,6 +75,31 @@
         <item name="android:textSize">32sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/darkPurple</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="btn_main">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_width">190dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:width">150dp</item>
+        <item name="android:height">70dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="fontFamily">@font/whaleitried</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:backgroundTint">@color/lightPink</item>
+    </style>
+
+    <style name="recyclerCDlabel">
+        <item name="fontFamily">@font/whaleitried</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
     </style>

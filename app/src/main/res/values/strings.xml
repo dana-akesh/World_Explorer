@@ -5,4 +5,8 @@
     <string name="progressbar_numbers">0/10</string>
     <string name="eimg_description">flag picture</string>
     <string name="btn_name">Submit</string>
+    <string name="go_to_next_question">"Go to Next Question "</string>
+    <string name="let_s_expolre">Let\'s Expolre</string>
+    <string name="btn_study">Study</string>
+    <string name="btn_quiz">Take the quiz</string>
 </resources>
