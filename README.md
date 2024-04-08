@@ -1,10 +1,19 @@
-# World_Explorer
+# 🌍 World_Explorer 🌍
 
-## What is World_Explorer??
+## 🤔 What is World_Explorer??
 A simple app to help kids learn more about the flags for Arab countries, I did this as an Assignment for Android course in university. 
 feel free to check it out!
 
-## Featuers:
+## ℹ️ System Information
+<ul>
+  <li>java 19.0.2 2023-01-17</li>
+  <li>Java(TM) SE Runtime Environment (build 19.0.2+7-44)</li>
+  <li>Java HotSpot(TM) 64-Bit Server VM (build 19.0.2+7-44, mixed mode, sharing)</li>
+  <li>Gradle 8.0</li>
+  <li>JVM: 19.0.2 (Oracle Corporation 19.0.2+7-44)</li>
+</ul>
+
+## ⭐ Featuers:
 <ol>
   <li> UX/UI that is suitable for kids. </li>
   <li> Spalsh screen animation upon starting the application. v1.2</li>
@@ -13,10 +22,28 @@ feel free to check it out!
   <li> Recycler View (1.4)</li>
 </ol>
 
-## Demo Video
+## Installation
+
+Follow these steps to set up and run the app on your local machine.
+
+### Prerequisites
+
+Make sure you have the following software installed on your development machine:
+
+- [Android Studio](https://developer.android.com/studio)
+- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html)
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/dana-akesh/World_Explorer
+cd World_Explorer
+```
+
+## 📺 Demo Video
 [device-2023-06-20-215733.webm](https://github.com/dana-akesh/World_Explorer/assets/86303193/4ee93594-a603-49e6-a74f-d80ed28357fe)
 
-## Screenshots
+## 📱 Screenshots
 <p float="center">
   <img src="https://github.com/dana-akesh/World_Explorer/assets/86303193/86d14cce-9fef-4335-93d3-3c127e1c6ec5"  width="196.375" height="416.5">
   <img src="https://github.com/dana-akesh/World_Explorer/assets/86303193/00703195-4a97-4434-b970-74f6eb506925" width="196.375" height="416.5">
